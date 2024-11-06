@@ -19,3 +19,8 @@ L’application devra etre capable :
 ### RESULTATS ATTENDUS:
 * Une application web
 * Un guide utilisateur pour l’application
+
+### NOMS DES PARTCIPANTS:
+*HEMA CHEICK ABOUDRAMANE LAMISSA
+*NEDIOULA EZECHIEL YANN EMMANUEL
+*SANGAN N'DOUBA ARNAUD
