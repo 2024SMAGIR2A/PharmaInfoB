@@ -9,14 +9,49 @@
     <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" rel="stylesheet">
     <link href="{{ asset('assets/css/nucleo-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/nucleo-svg.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link id="pagestyle" href="{{ asset('assets/css/material-dashboard.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            font-family: 'Inter', sans-serif;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .form-control {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .btn-dark {
+            background-color: #212121;
+            color: #fff;
+        }
+        .btn-dark:hover {
+            background-color: #424242;
+        }
+        .input-group-prepend .material-icons {
+            font-size: 20px;
+            color: #6c757d;
+        }
+        .material-icons {
+            transform: scale(1.5); /* Ajustez le facteur d'échelle selon vos besoins */
+        }
+    </style>
 </head>
 
 <body>
     <!-- Conteneur pour Particle.js -->
-    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+    <div id="particles-js"></div>
 
     <!-- Section de connexion -->
     <section class="d-flex justify-content-center align-items-center" style="height: 100vh; position: relative; z-index: 1;">
@@ -24,10 +59,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-5">
                     <div class="card border-0 shadow">
-                        <div class="card-header bg-white pb-5">
-                            <h4 class="text-center">Login</h4>
+                        <div class="card-header bg-white pb-5 text-center">
+                            <h4>PHARMACIE INFO B</h4> <br> <h4>Login</h4>
                         </div>
-                        <div class="card-body px-lg-5 py-lg-5">
+                        <div class="card-body px-lg-5 py-lg-1">
 
                             <!-- Affichage des erreurs -->
                             @if ($errors->any())
@@ -47,7 +82,7 @@
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
-                                                <i class="ni ni-email-83 text-primary"></i>
+                                                <span class="material-icons 3x">email</span>
                                             </span>
                                         </div>
                                         <input type="email" class="form-control" name="email" placeholder="Email" required>
@@ -57,7 +92,7 @@
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
-                                                <i class="ni ni-lock-circle-open text-primary"></i>
+                                                <span class="material-icons 3x">lock</span>
                                             </span>
                                         </div>
                                         <input type="password" class="form-control" name="password" placeholder="Password" required>
@@ -72,7 +107,7 @@
                                 </div>
                                 <div class="col-12 text-center">
                                     <a href="{{ route('search') }}" class="text-dark">
-                                        <small>Anonyme?</small>
+                                        <small>Connexion anonyme?</small>
                                     </a>
                                 </div>
                             </form>
@@ -81,7 +116,7 @@
                     <div class="row mt-3">
                         <div class="col-6">
                             <a href="#" class="text-light">
-                                <small>Forgot password?</small>
+                                <small>Mot de passe oublié?</small>
                             </a>
                         </div>
                     </div>
