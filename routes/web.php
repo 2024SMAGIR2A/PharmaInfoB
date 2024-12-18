@@ -18,16 +18,32 @@ Route::get('/search', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::get('/pharmacien/dashboard', function () {
+    return view('pharmacien.dashboard');
+})->name('pharamcien.dashboard');
+Route::get('/explorer/dashboard', function () {
+    return view('explorer.dashboard');
+})->name('explorer.dashboard');
 
 // Route pour afficher le formulaire de connexion
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
+//Rpoute pour traiter la deco
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // Route pour traiter la soumission du formulaire
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+
+
 
 Route::get('/pharmacies/search', [PharmacieController::class, 'pharmacieSearch'])->name('pharmacies.search');
 // Routes ressources pour les pharmacies
 Route::resource('pharmacies', PharmacieController::class);
+
+
+Route::get('/pharmacien/dashboard', [PharmacieController::class, 'ph_index'])->name('pharmacien.dashboard');
+
 
 // Routes ressources pour les users
 Route::resource('users', UserController::class);

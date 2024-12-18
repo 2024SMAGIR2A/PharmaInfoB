@@ -29,6 +29,22 @@ class SessionsTableSeeder extends Seeder
                 'payload' => json_encode(['data' => 'example_payload']),
                 'last_activity' => time(),
             ],
+            [
+                'id' => \Str::uuid(),
+                'user_id' => 3,
+                'ip_address' => '127.0.0.3',
+                'user_agent' => 'Mozilla/7.0 (Macintosh; Intel Mac OS X 10_15_7)',
+                'payload' => json_encode(['data' => 'example_payload']),
+                'last_activity' => time(),
+            ],
+            [
+                'id' => \Str::uuid(),
+                'user_id' => 4,
+                'ip_address' => '127.0.0.4',
+                'user_agent' => 'Mozilla/8.0 (Macintosh; Intel Mac OS X 10_15_7)',
+                'payload' => json_encode(['data' => 'example_payload']),
+                'last_activity' => time(),
+            ],
         ]);
     }
 }

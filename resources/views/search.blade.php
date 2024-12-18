@@ -5,10 +5,10 @@
     <h2 class="text-center text-dark">Rechercher une pharmacie</h2>
     <form action="{{ route('pharmacies.search') }}" method="GET" class="d-flex justify-content-center">
         <div class="input-group w-70 mx-auto rounded-lg shadow-sm">
-            <span class="input-group-text bg-white border-0 rounded-l-lg">
+            <span class="input-group-text bg-white border-1 rounded-l-lg">
                 <i class="fas fa-search"></i>
             </span>
-            <input type="text" name="query" class="form-control border-1 rounded-r-lg" placeholder="Entrez le nom ou la zone.." aria-label="Recherche" />
+            <input type="text" name="query" class="form-control border-0 rounded-r-lg" placeholder="Entrez le nom ou la zone..." aria-label="Recherche" />
         </div>
     </form>
 </div>

@@ -13,7 +13,24 @@ class PharmacieController extends Controller
         return view('pharmacies.index', compact('pharmacies'));
         
     }
+ 
+    public function ph_index()
+    {
+        // Récupérer l'utilisateur connecté
+        $user = auth()->user();
+    
+        if (!$user) {
+            return redirect()->route('login')->withErrors('Vous devez être connecté pour accéder à cette page.');
+        }
+    
+        // Récupérer les pharmacies associées à cet utilisateur
+        $pharmacie_ph = Pharmacie::where('id_pharmacien', $user->id_utilisateur)->get();
+    
+        // Retourner la vue avec les données
+        return view('pharmacien.dashboard', compact('pharmacie_ph'));
+    }
 
+    
     public function create()
     {
         return view('pharmacies.create');

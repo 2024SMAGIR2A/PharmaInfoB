@@ -29,8 +29,10 @@ class AuthController extends Controller
             $user = Auth::user();
             if ($user->role === 'admin') {
                 return redirect()->route('dashboard');
-            } elseif ($user->role === 'user') {
-                return redirect()->route('user.dashboard');
+            } elseif ($user->role === 'pharmacien') {
+                return redirect()->route('pharamcien.dashboard');
+            } elseif ($user->role === 'explorer') {
+                return redirect()->route('explorer.dashboard');
             } else {
                 Auth::logout();
                 return redirect()->route('login')->withErrors(['error' => 'Rôle utilisateur invalide.']);

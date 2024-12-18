@@ -19,7 +19,17 @@ class PasswordResetTokensTableSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'email' => 'user@example.com',
+                'email' => 'explorer@example.com',
+                'token' => \Str::random(60),
+                'created_at' => now(),
+            ],
+            [
+                'email' => 'ph@example.com',
+                'token' => \Str::random(60),
+                'created_at' => now(),
+            ],
+            [
+                'email' => 'ph2@example.com',
                 'token' => \Str::random(60),
                 'created_at' => now(),
             ],
