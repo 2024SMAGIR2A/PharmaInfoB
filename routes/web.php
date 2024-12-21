@@ -6,6 +6,7 @@ use App\Http\Controllers\PharmacieController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AvisController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StockController;
 
 // Redirection par défaut (optionnel, si vous souhaitez définir une page d'accueil)
 Route::get('/', function () {
@@ -54,3 +55,7 @@ Route::resource('avis', AvisController::class);
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+
+Route::resource('stocks', StockController::class);
