@@ -1,6 +1,6 @@
 ## LIBELLE DU THEME:
 
-## Application web permettant connaitre les pharmacies de gardes dans sa commune
+Application web permettant connaitre les pharmacies de gardes dans sa commune
 ## PROBLEMATIQUE:
 
 Difficile de connaitre les pharmacies de garde à certains moments de la nuit et jours fériés à Abidjan <br/>
@@ -28,6 +28,7 @@ Un guide utilisateur pour l’application
 ## NOM DES MEMBRES
 
 HEMA CHEICK ABOUDRAMANE <br/>
-NEDIOULA EZECHIEL
+NEDIOULA EZECHIEL <br/>
+SANGNE arnaud 
 
 
