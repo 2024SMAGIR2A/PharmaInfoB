@@ -29,6 +29,8 @@ Un guide utilisateur pour l’application
 
 HEMA CHEICK ABOUDRAMANE <br/>
 NEDIOULA EZECHIEL <br/>
-SANGNE arnaud 
+SANGAN N'DOUBA ARNAUD
+## LIENS DE MODELISATION
+https://dbdiagram.io/d/6759bfa546c15ed47912349c
 
 
