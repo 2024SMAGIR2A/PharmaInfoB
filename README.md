@@ -33,7 +33,7 @@ SANGAN N'DOUBA ARNAUD
 ## LIENS DE MODELISATION
 https://dbdiagram.io/d/678784f06b7fa355c3f22295
 
-https://www.planttext.com/#
+https://www.planttext.com/popout.html
 
 https://www.mermaidchart.com/app/projects/00f19b20-5934-4354-9e17-135288827dca/diagrams/fac32cb8-aa72-42ba-bf9c-7138fc1bfa1f/version/v0.1/edit
 
