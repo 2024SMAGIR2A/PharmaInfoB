@@ -42,6 +42,10 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::get('/pharmacies/search', [PharmacieController::class, 'pharmacieSearch'])->name('pharmacies.search');
 // Routes ressources pour les pharmacies
 Route::resource('pharmacies', PharmacieController::class);
+Route::get('pharmacies/{pharmacie}/edit', [PharmacieController::class, 'edit'])->name('pharmacies.edit');
+//Route::put('pharmacies/{pharmacie}', [PharmacieController::class, 'update'])->name('pharmacies.update');
+
+Route::put('pharmacies/{id_pharmacie}', [PharmacieController::class, 'update'])->name('pharmacies.update');
 
 
 Route::get('/pharmacien/dashboard', [PharmacieController::class, 'ph_index'])->name('pharmacien.dashboard');
