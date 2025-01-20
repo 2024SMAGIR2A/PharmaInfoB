@@ -10,7 +10,7 @@
             <select name="id_pharmacie" id="id_pharmacie" class="form-control" required>
                 <option value="" disabled selected>Choisir une pharmacie</option>
                 @foreach($pharmacies as $pharmacie)
-                    <option value="{{ $pharmacie->id }}">{{ $pharmacie->nom }}</option>
+                    <option value="{{ $pharmacie->id_pharmacie }}">{{ $pharmacie->nom }}</option>
                 @endforeach
             </select>
         </div>
