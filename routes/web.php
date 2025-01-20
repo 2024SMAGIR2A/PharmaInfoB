@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PharmacieController;
+use App\Http\Controllers\MedicamentsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AvisController;
 use App\Http\Controllers\AuthController;
@@ -59,3 +60,9 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 
 
 Route::resource('stocks', StockController::class);
+Route::get('/stocks', [StockController::class,'index'])->name(('stock.index'));
+
+// Routes ressources pour les Medicaments
+Route::resource('medicaments', MedicamentsController::class);
+Route::get('/mecidament/create',[MedicamentsController::class,'create']);
+Route::get('/medicament/show/{id_medicament}',[MedicamentsController::class,'addStock'])->name('medicament.show');

@@ -50,8 +50,8 @@
                                         <td>{{ $pharmacie->horaires_ouverture }}</td>
                                         <td><span class="badge bg-success">{{ $pharmacie->est_de_garde }}</span></td>
                                         <td>
-                                        <a class="btn btn-sm btn-outline-primary" href="{{ route('pharmacies.show', $pharmacie->id_pharmacie) }}">Voir</a>
-                                        <a class="btn btn-sm btn-outline-primary" href="{{ route('pharmacies.edit', $pharmacie->id_pharmacie) }}">Modifier</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="{{ route('pharmacies.show', $pharmacie->id_pharmacie) }}">Voir</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="{{ route('pharmacies.edit', $pharmacie->id_pharmacie) }}">Modifier</a>
                                         <form action="{{ route('pharmacies.destroy', $pharmacie->id_pharmacie) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')

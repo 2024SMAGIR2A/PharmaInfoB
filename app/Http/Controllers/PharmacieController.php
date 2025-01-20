@@ -37,35 +37,35 @@ class PharmacieController extends Controller
     }
 
     public function store(Request $request)
-{
-    $validatedData = $request->validate([
-        'pharmacyName' => 'required|string',
-        'address' => 'required|string',
-        'telephone' => 'required|string',
-        'openingHours' => 'required|string',
-        'servicesOffered' => 'required|string',
-        'paymentMethods' => 'required|string',
-        'isOnCall' => 'required|in:yes,no', // Ensure isOnCall is either "yes" or "no"
-        'latitude' => 'required|numeric',
-        'longitude' => 'required|numeric',
-        'pharmacistId' => 'required|integer', 
-    ]);
+    {
+        $validatedData = $request->validate([
+            'pharmacyName' => 'required|string',
+            'address' => 'required|string',
+            'telephone' => 'required|string',
+            'openingHours' => 'required|string',
+            'servicesOffered' => 'required|string',
+            'paymentMethods' => 'required|string',
+            'isOnCall' => 'required|in:yes,no', // Ensure isOnCall is either "yes" or "no"
+            'latitude' => 'required|numeric',
+            'longitude' => 'required|numeric',
+            'pharmacistId' => 'required|integer', 
+        ]);
 
-    $pharmacy = new Pharmacie;
-    $pharmacy->nom = $validatedData['pharmacyName'];
-    $pharmacy->adresse = $validatedData['address'];
-    $pharmacy->telephone = $validatedData['telephone'];
-    $pharmacy->horaires_ouverture = $validatedData['openingHours']; 
-    $pharmacy->services_offerts = $validatedData['servicesOffered'];
-    $pharmacy->moyens_paiement = $validatedData['paymentMethods'];
-    $pharmacy->est_de_garde = $validatedData['isOnCall']; 
-    $pharmacy->latitude = $validatedData['latitude'];
-    $pharmacy->longitude = $validatedData['longitude'];
-    $pharmacy->id_pharmacien = $validatedData['pharmacistId']; 
-    $pharmacy->save();
+        $pharmacy = new Pharmacie;
+        $pharmacy->nom = $validatedData['pharmacyName'];
+        $pharmacy->adresse = $validatedData['address'];
+        $pharmacy->telephone = $validatedData['telephone'];
+        $pharmacy->horaires_ouverture = $validatedData['openingHours']; 
+        $pharmacy->services_offerts = $validatedData['servicesOffered'];
+        $pharmacy->moyens_paiement = $validatedData['paymentMethods'];
+        $pharmacy->est_de_garde = $validatedData['isOnCall']; 
+        $pharmacy->latitude = $validatedData['latitude'];
+        $pharmacy->longitude = $validatedData['longitude'];
+        $pharmacy->id_pharmacien = $validatedData['pharmacistId']; 
+        $pharmacy->save();
 
-    return redirect()->route('pharmacies.index')->with('success', 'Pharmacie créée avec succès !'); 
-}
+        return redirect()->route('pharmacies.index')->with('success', 'Pharmacie créée avec succès !'); 
+    }
 
     public function show($id_pharmacie)
     {
