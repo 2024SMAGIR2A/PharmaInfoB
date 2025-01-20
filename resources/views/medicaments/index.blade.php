@@ -44,7 +44,7 @@
                                         <td>{{ $medicament->id_medicament }}</td>
                                         <td>{{ $medicament->nom }}</td>
                                         <td>
-                                            <a class="btn btn-sm btn-outline-primary" href="{{ route('medicaments.index', $medicament->id_medicament) }}">Voir</a>
+                                            <a class="btn btn-sm btn-outline-primary" href="{{ route('medicament.show', $medicament->id_medicament) }}">Faire une entrée de stock</a>
                                             {{--<a class="btn btn-sm btn-outline-primary" href="{{ route('pharmacies.edit', $medicament->is) }}">Modifier</a> --}}
                                         {{-- <form action="{{ route('pharmacies.destroy', $medicament->id) }}" method="POST" style="display: inline;">
                                             @csrf

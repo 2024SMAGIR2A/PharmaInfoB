@@ -33,7 +33,7 @@
             <input type="number" name="quantite" id="quantite" class="form-control" value="{{ $stock->quantite }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
-        <a href="{{ route('stocks.index') }}" class="btn btn-secondary">Annuler</a>
+        <a href="{{ route('stock.index') }}" class="btn btn-secondary">Annuler</a>
     </form>
 </div>
 @endsection
