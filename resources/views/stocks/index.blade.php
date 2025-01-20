@@ -22,7 +22,7 @@
         <tbody>
             @foreach($stocks as $stock)
                 <tr>
-                    <td>{{ $stock->id }}</td>
+                    <td>{{ $stock->id_stocks }}</td>
                     <td>{{ $stock->pharmacie->nom ?? 'N/A' }}</td>
                     <td>{{ $stock->medicament->nom ?? 'N/A' }}</td>
                     <td>{{ $stock->quantite }}</td>

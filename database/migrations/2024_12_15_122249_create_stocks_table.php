@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('stocks', function (Blueprint $table) {
+            $table->id('id_stocks');
             $table->unsignedBigInteger('id_pharmacie')->constrained('pharmacies')->onDelete('cascade');
             $table->unsignedBigInteger('id_medicament')->constrained('medicaments')->onDelete('cascade');
             $table->integer('quantite')->check('quantite >= 0');

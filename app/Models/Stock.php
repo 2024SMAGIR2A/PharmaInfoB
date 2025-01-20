@@ -14,6 +14,8 @@ class Stock extends Model
 
     protected $table = 'stocks';
 
+    protected $primaryKey = 'id_stocks';
+
     protected $fillable = [
         'id_pharmacie',
         'id_medicament',

@@ -24,13 +24,19 @@ class StockController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'id_pharmacie' => 'required|exists:pharmacies,id',
-            'id_medicament' => 'required|exists:medicaments,id',
+        $validatedData =$request->validate([
+            'id_pharmacie' => 'required|exists:pharmacies,id_pharmacie',
+            'id_medicament' => 'required|exists:medicaments,id_medicament',
             'quantite' => 'required|integer|min:0',
         ]);
+        dd($validatedData);
+        $stock = new Stock;
+        $stock->id_pharmacie=$validatedData->$validatedData['id_pharmacie'];
+        $stock->id_medicament=$validatedData->$validatedData['id_medicament'];
+        $stock->quantite=$validatedData->$validatedData['quantite'];
+        $stock->save();
 
-        Stock::create($request->all());
+        // Stock::create($request->all());
         return redirect()->route('stocks.index')->with('success', 'Stock ajouté avec succès.');
     }
 
