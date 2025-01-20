@@ -33,6 +33,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-dark" href="{{ url('stocks') }}">
+                    <i class="material-symbols-rounded opacity-5">table_view</i>
+                    <span class="nav-link-text ms-1">Stocks</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-dark" href="{{ url('avis') }}">
                     <i class="material-symbols-rounded opacity-5">receipt_long</i>
                     <span class="nav-link-text ms-1">Avis</span>

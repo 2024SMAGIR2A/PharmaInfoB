@@ -6,12 +6,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
 class Stock extends Model
 {
     use HasFactory;
 
     protected $table = 'stocks';
+
+    protected $primaryKey = 'id_stocks';
 
     protected $fillable = [
         'id_pharmacie',

@@ -37,6 +37,7 @@ class PharmacieController extends Controller
     }
 
     public function store(Request $request)
+
 {
     $validatedData = $request->validate([
         'nom' => 'required|string',              // Nom de la pharmacie
@@ -68,6 +69,7 @@ class PharmacieController extends Controller
 
     return redirect()->route('pharmacies.index')->with('success', 'Pharmacie créée avec succès !'); 
 }
+main
 
     public function show($id_pharmacie)
     {

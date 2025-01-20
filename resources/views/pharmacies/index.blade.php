@@ -29,6 +29,7 @@
                 <div class="col-lg-12 col-md-6 mt-4 mb-4">
                 <a class="btn btn-sm btn-outline-success" href="{{ route('pharmacies.create') }}"> + Ajouter une Pharmacie</a>
                     <div class="card">
+
     <div class="card-body">
         <!-- Conteneur qui permet le défilement horizontal -->
         <div class="table-responsive">
@@ -87,6 +88,7 @@
         </div>
     </div>
 </div>
+
 
                 </div>    
             </div>
