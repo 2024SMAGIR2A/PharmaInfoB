@@ -38,10 +38,10 @@
                       class="form-control" 
                       list="optionsList" 
                       id="searchInput" 
-                      name="searchInput" 
+                      name="pharmacie" 
                       placeholder="Tapez pour rechercher..." 
                   />
-                  <datalist id="optionsList">
+                  <datalist id="optionsList" name="pharmacie">
                       @foreach ($pharmacies as $pharmacie)
                           <option value="{{ $pharmacie->nom }}">{{$pharmacie->nom}}</option>
                       @endforeach
