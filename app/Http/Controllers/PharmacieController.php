@@ -69,8 +69,6 @@ class PharmacieController extends Controller
 
     return redirect()->route('pharmacies.index')->with('success', 'Pharmacie créée avec succès !'); 
 }
-main
-
     public function show($id_pharmacie)
     {
         $pharmacie = Pharmacie::findOrFail($id_pharmacie); // Utilise id_pharmacie comme clé primaire

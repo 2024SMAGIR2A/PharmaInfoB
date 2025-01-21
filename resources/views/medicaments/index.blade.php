@@ -14,9 +14,7 @@
 </head>
 <body>
     <div class="container-fluid py-2">
-    <h1>@if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
+    <h1>
         </div></h1>
    
 
